@@ -1,5 +1,205 @@
+/* root CSS */
+:root {
+    /* Primary Colors */
+    --color-white: hsl(0, 0%, 100%);
+    --color-light-red: hsl(0, 100%, 67%);
+    --color-orangey-yellow: hsl(39, 100%, 56%);
+    --color-teal-green: hsl(166, 100%, 37%);
+    --color-dark-blue: hsl(224, 30%, 27%);
+    --color-blue: hsl(234, 85%, 45%);
+    --color-pale-blue: hsl(221, 100%, 96%);
+    --color-light-lavender: hsl(241, 100%, 89%);
+    --color-dark-blue-transparent: hsla(224, 30%, 27%, 0.5);
+    --color-orangey-yellow-transparent: hsl(39, 100%, 56%, 0.05);
+    --color-blue-transparent: hsl(234, 85%, 45%, 0.05);
+    --color-teal-green-transparent: hsl(166, 100%, 37%, 0.07);
+    --color-light-red-transparent: hsla(0, 100%, 67%, 0.05);
+
+    /* Gradient Colors */
+    --gradient-primary: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    --gradient-secundary: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+
+    /* Weights  */
+    --weight-light: 500;
+    --weight-medium: 700;
+    --weight-heavy: 900;
+
+    /* FontSizes */
+    --fontSize-1: 12px;
+    --fontSize-1_5: 18px;
+    --fontSize-2: 24px;
+    --fontSize-3: 36px;
+    --fontSize-4: 48px;
+    --fontSize-5: 64px;
+
+    /* Spacings */
+    --spacing-1: 4px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 20px;
+    --spacing-6: 24px;
+    --spacing-7: 28px;
+    --spacing-8: 32px;
+
+    /* Border Radious */
+    --borderRadious-1: 5px;
+    --borderRadious-2: 10px;
+    --borderRadious-3: 15px;
+    --borderRadious-4: 20px;
+    --borderRadious-full: 100%;
+}
+
+/* config CSS */
+
 * {
     margin: 0;
     padding: 0;
     font-family: 'Hanken Grotesk', sans-serif;
 }
+
+body {
+    height: 100vh;
+}
+
+
+/* Results CSS */
+.resultsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-6);
+    padding: var(--spacing-8);
+    background: var(--gradient-primary);
+    border-bottom-left-radius: var(--borderRadious-4);
+    border-bottom-right-radius: var(--borderRadious-4);
+}
+
+.resultsWrapper__heading {
+    color: var(--color-light-lavender);
+}
+
+.resultsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--borderRadious-full);
+    background: var(--gradient-secundary);
+    height: 150px;
+    width: 150px;
+}
+
+.resultsContainer__heading {
+    font-size: var(--fontSize-5);
+    color: var(--color-white);
+}
+
+.resultsContainer__info {
+    color: var(--color-light-lavender);
+    font-weight: var(--weight-light);
+}
+
+.resultsWrapper__status {
+    color: var(--color-white);
+}
+
+.resultsWrapper__description {
+    color: var(--color-light-lavender);
+    text-align: center;
+    padding: 0 var(--spacing-4);
+}
+
+/* Summary CSS */
+
+.summaryWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+    padding: var(--spacing-8);
+}
+
+.summaryWrapper__heading {
+    font-weight: var(--weight-light);
+}
+
+.summaryContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-4);
+}
+
+.summaryContainer__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: var(--spacing-4);
+    border-radius: var(--borderRadious-2);
+    box-sizing: border-box;
+}
+
+.summaryContainer__info,
+.summaryContainer__score {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.summaryContainer__score--gray {
+    color: var(--color-dark-blue-transparent);
+}
+
+.summaryContainer__score--bold {
+    font-weight: var(--weight-heavy);
+}
+
+.summaryContainer__info--reaction {
+    color: var(--color-light-red);
+}
+
+.summaryContainer__info--memory {
+    color: var(--color-orangey-yellow);
+}
+
+.summaryContainer__info--verbal {
+    color: var(--color-teal-green);
+}
+
+.summaryContainer__info--visual {
+    color: var(--color-blue);
+}
+
+.reaction {
+    background-color: var(--color-light-red-transparent);
+}
+
+.memory {
+    background-color: var(--color-orangey-yellow-transparent);
+}
+
+.verbal {
+    background-color: var(--color-teal-green-transparent);
+}
+
+.visual {
+    background-color: var(--color-blue-transparent);
+}
+
+.summaryWrapper__button {
+    width: 100%;
+    padding: var(--spacing-4);
+    background-color: var(--color-dark-blue);
+    border: unset;
+    border-radius: var(--borderRadious-4);
+    font-size: var(--fontSize-1_5);
+    color: var(--color-white);
+}
+
+.summaryWrapper__button:hover {
+    cursor: pointer;
+}
+
+/* Responsive CSS */
