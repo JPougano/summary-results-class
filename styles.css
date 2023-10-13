@@ -203,3 +203,28 @@ body {
 }
 
 /* Responsive CSS */
+
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper {
+        display: flex;
+        width: 700px;
+        border-radius: var(--borderRadious-4);
+        box-shadow: 5px 5px 10px var(--color-pale-blue); 
+       }
+
+    .resultsWrapper {
+        width: 50%;
+        border-radius: var(--borderRadious-4);
+    }
+
+    .summaryWrapper {
+        width: 50%;
+    }
+
+}
